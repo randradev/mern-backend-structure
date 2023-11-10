@@ -3,7 +3,9 @@
 const router = require('express').Router();
 //Inicializa el enrutador que define las rutas
 
-router.post('/crear', (req, res) => res.send('Respuesta del servidor, funciona la peticion post'));
+const { crearUser } = require('../controllers/user.controller');
+
+router.post('/crear', crearUser);
 // Ruta post en /crear para crear usuario
 
 module.exports = router;
