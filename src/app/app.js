@@ -5,6 +5,8 @@
 const express = require('express');
 //Importa dependencia express para el framework web del servidor.
 
+const cors = require('cors');
+
 const morgan = require('morgan');
 //Importa dependencias de Morgan para el registro de solicitudes HTTP.
 
@@ -26,6 +28,8 @@ app.use(express.json());
 
 app.use(express.urlencoded({extended: true}));
 //Configura middleware para analizar datos codificados en la URL.
+
+app.use(cors());
 
 //RUTAS
 
